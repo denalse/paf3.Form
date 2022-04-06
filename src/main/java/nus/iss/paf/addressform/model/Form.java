@@ -71,6 +71,7 @@ public class Form {
         f.setPhone(body.getFirst("phone"));
         f.setStatus(body.getFirst("status"));
         f.setDob(body.getFirst("dob"));
+        System.out.println(">>>>>>> DOB: " + f.getDob());
         f.setPassPhrase(body.getFirst("passPhrase"));
         return f;
     }
@@ -82,6 +83,7 @@ public class Form {
         f.setPhone(result.getString("phone"));
         f.setStatus(result.getString("status"));
         f.setDob(result.getString("dob"));
+        System.out.println(">>>>>>> DOB: " + f.getDob());
         f.setPassPhrase(result.getString("pass_phrase"));
         return f;
     }

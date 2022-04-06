@@ -23,13 +23,13 @@ public class FormRepo {
 
     public boolean setForms(Form form) {
         return setForms(form.getEmail(), form.getName(),
-                        form.getPhone(), form.getStatus(),
-                        form.getDob(), form.getPassPhrase());
+                        form.getPhone(), form.getDob(),
+                        form.getStatus(), form.getPassPhrase());
     }
 
-    public boolean setForms(String email, String name, String phone, String status, String dob, String passPhrase) {
+    public boolean setForms(String email, String name, String phone, String dob, String status, String passPhrase) {
         int added = template.update(
-            SQL_INSERT_FORM , email, name, phone, status, dob, passPhrase
+            SQL_INSERT_FORM , email, name, phone, dob, status, passPhrase
         );
 
         return added > 0;

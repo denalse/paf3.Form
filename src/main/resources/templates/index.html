@@ -16,7 +16,7 @@
             <div class="col-3">
                 <!-- <img class="w-75" th:src="${game.image}"> -->
                 <div class="col-1000000">
-                    <form action = "/" method="get">
+                    <form action = "/add" method="POST">
                     <!-- <input type="text" name="Email" class="form-control"> -->
                         <label for="email" class="mt-1 h5">Email: </label>
                         <input type="text" value="" id="email" name="email" />
@@ -37,14 +37,15 @@
                         <br>
 
                         <label for="dob" class="mt-4 h5">DoB: </label>
-                        <input type="date" value="" placeholder="dd-mm-yyyy" id="dob" name="date" />
+                        <input type="date" name="dob" />
 
                         <label for="passPhrase" class="mt-4 h5">Pass Phrase: </label>
                         <input type="password" value="" id="passPrase" name="passPhrase" />
 
                         <!-- <input type="button" value="add" name="add"> -->
                         <br><br>
-                        <button type="button" class="btn btn-secondary mt-1" name="submit" value="submit"> ADD </button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <!-- <button type="button" class="btn btn-secondary mt-1" name="submit" value="submit"> ADD </button> -->
                     </form>
                 </div>
             </div>

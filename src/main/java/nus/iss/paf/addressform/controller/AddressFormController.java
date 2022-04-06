@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ import nus.iss.paf.addressform.repository.FormRepo;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping //("/", method="POST")
 public class AddressFormController {
 
     private Logger logger = LoggerFactory.getLogger(AddressFormController.class);
@@ -26,12 +26,12 @@ public class AddressFormController {
     @Autowired
     private FormRepo repo;
 
-    @GetMapping("/")
-    public String showForm() {
-        return "index";
-    }
+    // @GetMapping("/")
+    // public String showForm() {
+    //     return "index";
+    // }
 
-    @PostMapping(path = "/form", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    @PostMapping(path = "/add", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public String showForm(Model model, @RequestBody MultiValueMap<String,String> payload){
     
         Form f = Form.create(payload);
