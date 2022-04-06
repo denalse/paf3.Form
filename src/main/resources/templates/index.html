@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <h1 style="text-align:center" class="mt-1">Address Form</h1>
+        <div class="row justify-content-center mt-2">
+            <div class="col-3">
+                <!-- <img class="w-75" th:src="${game.image}"> -->
+                <div class="col-1000000">
+                    <form action = "/" method="get">
+                    <!-- <input type="text" name="Email" class="form-control"> -->
+                        <label for="email" class="mt-1 h5">Email: </label>
+                        <input type="text" value="" id="email" name="email" />
+
+                        <label for="name" class="mt-4 h5">Name: </label>
+                        <input type="text" value="" id="name" name="name" />
+
+                        <label for="phone" class="mt-4 h5">Phone: </label>
+                        <input type="text" value="" id="phone" name="phone" />
+
+                        <label for="status" class="mt-4 h5">Status: 
+                        <select id="status" name="status" class="form-select">
+                            <option value="friend">Friend</option>
+                            <option value="foe">Foe</option>
+                        </select>
+                        </label>
+
+                        <br>
+
+                        <label for="dob" class="mt-4 h5">DoB: </label>
+                        <input type="date" value="" placeholder="dd-mm-yyyy" id="dob" name="date" />
+
+                        <label for="passPhrase" class="mt-4 h5">Pass Phrase: </label>
+                        <input type="password" value="" id="passPrase" name="passPhrase" />
+
+                        <!-- <input type="button" value="add" name="add"> -->
+                        <br><br>
+                        <button type="button" class="btn btn-secondary mt-1" name="submit" value="submit"> ADD </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
